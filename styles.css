@@ -9,6 +9,7 @@
     background-color: var(--background);
 
 }
+
 .item.active {
     display: block;
 }
@@ -41,7 +42,8 @@
     transform: translate(-50%, -50%);
 }
 
-#prev, #next {
+#prev,
+#next {
     position: absolute;
     top: 50;
     transform: translateY(900%);
@@ -79,6 +81,6 @@
 }
 
 .item.active .title {
-     animation: toActive 0.5s ease-in-out 1;
+    animation: toActive 0.5s ease-in-out 1;
 
 }
