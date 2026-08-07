@@ -1,45 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slider de Refrigerantes</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrossel de Refrigerantes</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <main class="carousel" role="region" aria-label="Carrossel de refrigerantes">
+    <div class="viewport">
+      <div class="slides">
+        <article class="slide" style="--background: #2d5643;" aria-roledescription="slide" aria-label="Abacate">
+          <h2 class="title">Abacate</h2>
+          <img src="./img/Abacate.png" class="fruit" alt="Abacate" draggable="false">
+          <img src="./img/2.png" class="refri" alt="Refrigerante de Abacate" draggable="false">
+        </article>
 
-    <main class="slider">
+        <article class="slide" style="--background: #e7a043;" aria-roledescription="slide" aria-label="Laranja">
+          <h2 class="title">Laranja</h2>
+          <img src="./img/laranja.png" class="fruit" alt="Laranja" draggable="false">
+          <img src="./img/3.png" class="refri" alt="Refrigerante de Laranja" draggable="false">
+        </article>
 
-        <div class="item active" style="--background: #2d5643;">
-            <div class="title">Abacate</div>
+        <article class="slide" style="--background: #8aa6ff;" aria-roledescription="slide" aria-label="Morango">
+          <h2 class="title">Morango</h2>
+          <img src="./img/morango.png" class="fruit" alt="Morango" draggable="false">
+          <img src="./img/4.png" class="refri" alt="Refrigerante de Morango" draggable="false">
+        </article>
+      </div>
+    </div>
 
-            <img src="./img/Abacate.png" class="fruit" alt="Abacate">
+    <div class="controls">
+      <button id="prev" class="nav" aria-label="Item anterior">&lt;</button>
+      <div class="indicators" role="tablist" aria-label="Indicadores do carrossel"></div>
+      <button id="next" class="nav" aria-label="Próximo item">&gt;</button>
+    </div>
+  </main>
 
-            <img src="./img/2.png" class="refri" alt="Refrigerante de Abacate">
-        </div>
-
-        <div class="item hidden" style="--background: #e7a043;">
-            <div class="title">Laranja</div>
-
-            <img src="./img/laranja.png" class="fruit" alt="Laranja">
-
-            <img src="./img/3.png" class="refri" alt="Refrigerante de Laranja">
-        </div>
-
-        <div class="arrow">
-            <button id="prev" aria-label="Item anterior">
-                &lt;
-            </button>
-
-            <button id="next" aria-label="Próximo item">
-                &gt;
-            </button>
-        </div>
-
-    </main>
-
-    <script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
