@@ -7,7 +7,6 @@
     left: 0;
     overflow: hidden;
     background-color: var(--background);
-
 }
 
 .item.active {
@@ -16,71 +15,91 @@
 
 .item .title {
     font-size: 12rem;
-    color: #ffffff;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
     font-weight: bold;
     text-align: center;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 .item .fruit {
     width: 90%;
     position: absolute;
     top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 3;
 }
 
 .item .refri {
-    z-index: 2;
     width: 600px;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    z-index: 2;
 }
 
+/* Botões */
 #prev,
 #next {
     position: absolute;
-    top: 50;
-    transform: translateY(900%);
+    top: 50%;
+    transform: translateY(-50%);
     width: 50px;
     height: 50px;
-    background-color: #eee9;
-    border: 1px solid #eee9;
-    color: #eee;
-    font-size: x-large;
+    background-color: rgba(238, 238, 238, 0.6);
+    border: 1px solid rgba(238, 238, 238, 0.8);
+    color: #fff;
+    font-size: 24px;
     font-family: monospace;
     cursor: pointer;
     z-index: 4;
     border-radius: 50%;
-
+    transition: 0.3s;
 }
 
 #prev {
-    left: 97%;
+    left: 20px;
 }
 
-#nest {
-    right: 100%;
+#next {
+    right: 20px;
 }
 
+#prev:hover,
+#next:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Animação */
 @keyframes toActive {
     from {
         top: 100%;
         opacity: 0;
     }
+
+    to {
+        top: 50%;
+        opacity: 1;
+    }
 }
 
-.item.active img.fruit {
-    animation: toActive 0.5s ease-in-out 1;
-
+.item.active .fruit {
+    animation: toActive 0.8s ease-in-out;
 }
 
 .item.active .title {
-    animation: toActive 0.5s ease-in-out 1;
+    animation: toActive 0.8s ease-in-out;
+}
 
+.item.active .refri {
+    animation: toActive 0.8s ease-in-out;
 }
